@@ -27,49 +27,49 @@ body {
     background-color: var(--dkblue2);
     margin: 10rem auto;
     max-width: 350px;
+    position: relative;
 }
-.component-item {
-    margin: 0;
-    padding: 0;
+main .image {
+    position: relative;  
+    overflow: hidden;
+    display: block;
 }
-.image {
+.component .image>img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+.component .image div {  
+    position: absolute;
+    top: 0;
+    background-color: hsl(178deg 100% 50% / 40%);
     width: 100%;
     height: 100%;
-    border-radius: 5px;
-    opacity: 1;
-    transition: .5s ease;
-    backface-visibility: hidden;
-}
-.component-item:hover .image {
-    opacity: 0.3;
-    cursor: pointer;
-    background-color: var(--cyan);
-}
-.overlay {
-    transition: .5s ease;
+    border-radius:0.625rem ;
     opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.component-item:hover .overlay {
+.component .image div:hover {
     opacity: 1;
 }
-.component-description h1 {
+.title {
     color: var(--white);
     font-size: 1.3rem;
+    text-decoration: none;
 }
-.component-description h1:hover {
+.title:hover {
     color: var(--cyan);
     cursor: pointer;
 }
-.component-description p {
+.component p {
     color: var(--softblue);
     font-weight: 300;
 }
-.component-description hr {
+hr {
     border: 1px solid var(--hrline);
 }
 .market {
@@ -115,6 +115,7 @@ body {
 }
 .artist-name {
     color: var(--white);
+    text-decoration: none;
 }
 .artist-name:hover {
     color: var(--cyan);
