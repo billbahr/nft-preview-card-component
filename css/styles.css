@@ -33,9 +33,15 @@ body {
     max-height: 100%;
     border-radius: 5px;
 }
+.component-item:hover {
+    background-color: var(--cyan);
+}
 .component-description h1 {
     color: var(--white);
     font-size: 1.3rem;
+}
+.component-description h1:hover {
+    color: var(--cyan);
 }
 .component-description p {
     color: var(--softblue);
@@ -48,9 +54,28 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.market img {
+.market-price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.market-price p {
+    color: var(--cyan);
+}
+.market-time {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+.market-price img {
+    width: 14px;
+    height: 23px;
+}
+.market-time img {
     width: 20px;
-    height: 32px;
+    height: 20px;
 }
 .artist {
     display: flex;
@@ -68,6 +93,9 @@ body {
 }
 .artist-name {
     color: var(--white);
+}
+.artist-name:hover {
+    color: var(--cyan);
 }
 .attribution {
     font-size: 11px;
